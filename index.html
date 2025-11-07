@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDA-Lab | Structural Dynamics and Assessment Laboratory | UCD</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            --ucd-blue: #193969;
+            --ucd-gold: #FFC72C;
+            --ucd-light-blue: #00B1E9;
+            --ucd-green: #006950;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 mb-12 text-center;
+        }
+        /* Custom UCD Colors for Tailwind */
+        .bg-ucd-blue { background-color: var(--ucd-blue); }
+        .text-ucd-blue { color: var(--ucd-blue); }
+        .text-ucd-gold { color: var(--ucd-gold); }
+        .text-ucd-light-blue { color: var(--ucd-light-blue); }
+        .border-ucd-blue { border-color: var(--ucd-blue); }
+        .hover\:text-ucd-gold:hover { color: var(--ucd-gold); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+    <div class="flex flex-col min-h-screen">
+        <!-- Header & Navigation -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+                <a href="#" class="flex flex-row items-end mr-6">
+                    <!-- UCD Logo (Local file, larger size) -->
+                    <img src="ucd-logo.png" alt="UCD Logo" class="h-16 w-auto md:h-20" style="max-height: 60px;">
+                    <span class="flex flex-col items-start ml-2 pb-1">
+                      <span class="text-base font-semibold text-ucd-blue leading-tight">University College Dublin</span>
+                      <span class="text-base font-bold text-ucd-light-blue leading-tight mt-0">Structural Dynamics and Assessment Laboratory (SDA-Lab)</span>
+                    </span>
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-ucd-blue font-bold hover:text-ucd-gold transition duration-300">Home</a>
+                    <a href="#research" class="text-ucd-blue font-bold hover:text-ucd-gold transition duration-300">Research</a>
+                    <a href="#funding" class="text-ucd-blue font-bold hover:text-ucd-gold transition duration-300">Funding</a>
+                    <a href="#publications" class="text-ucd-blue font-bold hover:text-ucd-gold transition duration-300">Publications</a>
+                    <a href="#team" class="text-ucd-blue font-bold hover:text-ucd-gold transition duration-300">Team</a>
+                    <a href="#contact" class="text-ucd-blue font-bold hover:text-ucd-gold transition duration-300">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </nav>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-ucd-blue">Home</a>
+                <a href="#research" class="block py-2 text-gray-600 hover:text-ucd-blue">Research</a>
+                <a href="#funding" class="block py-2 text-gray-600 hover:text-ucd-blue">Funding</a>
+                <a href="#publications" class="block py-2 text-gray-600 hover:text-ucd-blue">Publications</a>
+                <a href="#team" class="block py-2 text-gray-600 hover:text-ucd-blue">Team</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-ucd-blue">Contact</a>
+            </div>
+        </header>
+
+        <main class="flex-1 flex flex-col justify-center">
+        <!-- Hero Section -->
+        <section id="home" class="relative text-white bg-ucd-blue flex items-center justify-center min-h-[180px] h-[280px] max-h-[40vh]">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-stretch justify-between h-full">
+                <div class="w-full md:w-1/2 flex flex-col justify-center items-center text-center mb-6 md:mb-0 h-full">
+                    <div class="inline-block rounded-lg px-4 py-2 bg-ucd-blue bg-opacity-100 flex flex-col justify-center h-full">
+                        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-0">Structural Dynamics and Assessment Laboratory</h1>
+                        <h2 class="text-2xl md:text-3xl font-bold leading-tight mb-2">(SDA-Lab)</h2>
+                        <p class="text-lg md:text-xl font-light">School of Civil Engineering | University College Dublin</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex h-full">
+                    <div class="flex flex-1 items-center justify-end h-full w-full" style="background-color: var(--ucd-blue);">
+                        <img src="landscape.png" alt="Lab Landscape" class="rounded-lg shadow-lg object-contain" style="max-height: 350px; max-width: 80%;" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Welcome / About Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                 <h2 class="section-title">Welcome to the SDA-Lab</h2>
+                 <p class="text-lg leading-relaxed">
+                    Welcome to the official website of the Structural Dynamics and Assessment Laboratory (SDA-Lab) at University College Dublin. Our group focuses on pioneering research in structural dynamics, health monitoring, and data-driven assessment of civil infrastructure. We are dedicated to developing innovative solutions for ensuring the safety and resilience of structures such as bridges, buildings, and wind turbines. Explore our website to learn more about our research, publications, and the people behind our work.
+                 </p>
+                 <p class="mt-6 font-semibold">- Dr. Abdollah Malekjafarian, Associate Professor</p>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Research Focus</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Research Area 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-ucd-blue">Structural Dynamics & Random Vibrations</h3>
+                        <p>Investigating the dynamic behavior of structures under operational and extreme loading conditions using analytical, numerical, and experimental methods.</p>
+                    </div>
+                    <!-- Research Area 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-ucd-blue">Transport Infrastructure</h3>
+                        <p>Developing novel monitoring and assessment techniques for transport infrastructure, including bridges and railways, to enhance safety, and optimise maintenance.</p>
+                    </div>
+                    <!-- Research Area 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold mb-2 text-ucd-blue">Offshore Renewable Energy</h3>
+                        <p>Addressing the challenges in the design, monitoring, and assessment of offshore wind turbines and other renewable energy systems to ensure their long-term performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Funding Section -->
+        <section id="funding" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Our Funding & Collaborators</h2>
+                <p class="text-center text-lg max-w-3xl mx-auto mb-12">Our research is made possible through the generous support of national and international funding agencies and our valued industry partners. We gratefully acknowledge their contribution.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                    <!-- Funding Body 1 -->
+                    <div class="flex justify-center">
+                        <img src="https://placehold.co/200x100/cccccc/333333?text=SFI+Logo" alt="Science Foundation Ireland Logo" class="h-16 object-contain">
+                    </div>
+                    <!-- Funding Body 2 -->
+                    <div class="flex justify-center">
+                        <img src="https://placehold.co/200x100/cccccc/333333?text=IRC+Logo" alt="Irish Research Council Logo" class="h-16 object-contain">
+                    </div>
+                    <!-- Funding Body 3 -->
+                    <div class="flex justify-center">
+                        <img src="https://placehold.co/200x100/cccccc/333333?text=ERC+Logo" alt="European Research Council Logo" class="h-16 object-contain">
+                    </div>
+                    <!-- Funding Body 4 -->
+                    <div class="flex justify-center">
+                         <img src="https://placehold.co/200x100/cccccc/333333?text=Industry+Partner" alt="Industry Partner Logo" class="h-16 object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="section-title">Recent Publications</h2>
+                <div class="space-y-6">
+                    <!-- Publication 1: Replace with your publication -->
+                    <div class="p-4 border-l-4 border-ucd-blue bg-white rounded-r-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Malekjafarian, A., & Obrien, E. J. (2023). Title of the journal paper goes here. <em class="text-gray-600">Journal of Structural Engineering, 149</em>(1), 04022207.</p>
+                        <a href="#" class="text-ucd-blue hover:text-ucd-gold transition-colors duration-300">View Publication</a>
+                    </div>
+                    <!-- Publication 2: Replace with your publication -->
+                    <div class="p-4 border-l-4 border-ucd-blue bg-white rounded-r-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Student, A. B., & Malekjafarian, A. (2022). Another important paper title. <em class="text-gray-600">Journal of Bridge Engineering, 27</em>(5), 04022021.</p>
+                        <a href="#" class="text-ucd-blue hover:text-ucd-gold transition-colors duration-300">View Publication</a>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#" class="bg-ucd-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                        View All Publications (e.g., on Google Scholar)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Our Team</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+                    <!-- Team Member 1: PI -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/200x200/a3e635/ffffff?text=A.M." alt="Dr. Abdollah Malekjafarian" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Dr. Abdollah Malekjafarian</h3>
+                        <p class="text-ucd-blue font-semibold">Principal Investigator</p>
+                    </div>
+                    <!-- Team Member 2: Postdoc -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/200x200/facc15/ffffff?text=Postdoc" alt="Postdoctoral Researcher" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Researcher Name</h3>
+                        <p class="text-ucd-blue font-semibold">Postdoctoral Researcher</p>
+                    </div>
+                    <!-- Team Member 3: Postdoc -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/200x200/facc15/ffffff?text=Postdoc" alt="Postdoctoral Researcher" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Researcher Name</h3>
+                        <p class="text-ucd-blue font-semibold">Postdoctoral Researcher</p>
+                    </div>
+                    <!-- Team Member 4: PhD Candidate -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/200x200/60a5fa/ffffff?text=PhD" alt="PhD Candidate" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Student Name</h3>
+                        <p class="text-ucd-blue font-semibold">PhD Candidate</p>
+                    </div>
+                    <!-- Team Member 5: PhD Candidate -->
+                     <div class="text-center">
+                        <img src="https://placehold.co/200x200/60a5fa/ffffff?text=PhD" alt="PhD Candidate" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Student Name</h3>
+                        <p class="text-ucd-blue font-semibold">PhD Candidate</p>
+                    </div>
+                     <!-- Team Member 6: PhD Candidate -->
+                     <div class="text-center">
+                        <img src="https://placehold.co/200x200/60a5fa/ffffff?text=PhD" alt="PhD Candidate" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Student Name</h3>
+                        <p class="text-ucd-blue font-semibold">PhD Candidate</p>
+                    </div>
+                     <!-- Team Member 7: PhD Candidate -->
+                     <div class="text-center">
+                        <img src="https://placehold.co/200x200/60a5fa/ffffff?text=PhD" alt="PhD Candidate" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Student Name</h3>
+                        <p class="text-ucd-blue font-semibold">PhD Candidate</p>
+                    </div>
+                     <!-- Team Member 8: PhD Candidate -->
+                     <div class="text-center">
+                        <img src="https://placehold.co/200x200/60a5fa/ffffff?text=PhD" alt="PhD Candidate" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Student Name</h3>
+                        <p class="text-ucd-blue font-semibold">PhD Candidate</p>
+                    </div>
+                     <!-- Team Member 9: PhD Candidate -->
+                     <div class="text-center">
+                        <img src="https://placehold.co/200x200/60a5fa/ffffff?text=PhD" alt="PhD Candidate" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Student Name</h3>
+                        <p class="text-ucd-blue font-semibold">PhD Candidate</p>
+                    </div>
+                     <!-- Team Member 10: PhD Candidate -->
+                     <div class="text-center">
+                        <img src="https://placehold.co/200x200/60a5fa/ffffff?text=PhD" alt="PhD Candidate" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Student Name</h3>
+                        <p class="text-ucd-blue font-semibold">PhD Candidate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-ucd-blue text-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
+                 <p class="mb-4 text-lg">We are always looking for passionate students and collaborators.</p>
+                 <div class="text-gray-300">
+                    <p>Structural Dynamics and Assessment Laboratory (SDA-Lab)</p>
+                    <p>School of Civil Engineering, University College Dublin</p>
+                    <p>Belfield, Dublin 4, Ireland</p>
+                    <p class="mt-4">Email: <a href="mailto:abdollah.malekjafarian@ucd.ie" class="text-ucd-gold hover:underline">abdollah.malekjafarian@ucd.ie</a></p>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-6">
+            <div class="container mx-auto px-6 text-center text-gray-400">
+                <p>&copy; <span id="year"></span> SDA-Lab, University College Dublin. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- JavaScript for Mobile Menu and dynamic year -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
